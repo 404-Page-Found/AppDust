@@ -82,11 +82,11 @@ internal sealed class AppDustCli
 
         Console.WriteLine($"Run ID: {plan.RunId}");
         Console.WriteLine($"Candidates: {plan.Candidates.Count}");
-        Console.WriteLine($"Potential bytes: {plan.TotalBytes:N0}");
+        Console.WriteLine($"Potential size: {ByteSizeFormatter.Format(plan.TotalBytes)}");
 
         foreach (var candidate in plan.Candidates.Take(10))
         {
-            Console.WriteLine($"  {candidate.SizeBytes,12:N0}  {candidate.OriginalPath}");
+            Console.WriteLine($"  {ByteSizeFormatter.Format(candidate.SizeBytes),10}  {candidate.OriginalPath}");
         }
 
         if (plan.Warnings.Count > 0)
@@ -127,7 +127,7 @@ internal sealed class AppDustCli
         Console.WriteLine($"Run ID: {result.RunId}");
         Console.WriteLine($"Mode: {result.Mode}");
         Console.WriteLine($"Processed files: {result.ProcessedCount}");
-        Console.WriteLine($"Processed bytes: {result.ProcessedBytes:N0}");
+        Console.WriteLine($"Processed size: {ByteSizeFormatter.Format(result.ProcessedBytes)}");
         Console.WriteLine($"Report: {reportPath}");
 
         if (!string.IsNullOrWhiteSpace(result.QuarantineManifestPath))
@@ -163,7 +163,7 @@ internal sealed class AppDustCli
 
         Console.WriteLine($"Run ID: {result.RunId}");
         Console.WriteLine($"Restored files: {result.RestoredCount}");
-        Console.WriteLine($"Restored bytes: {result.RestoredBytes:N0}");
+        Console.WriteLine($"Restored size: {ByteSizeFormatter.Format(result.RestoredBytes)}");
         Console.WriteLine($"Report: {reportPath}");
 
         if (result.Warnings.Count > 0)
@@ -194,7 +194,7 @@ internal sealed class AppDustCli
         foreach (var manifest in manifests)
         {
             var totalBytes = manifest.Entries.Sum(entry => entry.SizeBytes);
-            Console.WriteLine($"{manifest.RunId}  {manifest.CreatedUtc:yyyy-MM-dd HH:mm:ss zzz}  {manifest.Entries.Count} files  {totalBytes:N0} bytes  profile={manifest.Profile.Name}");
+            Console.WriteLine($"{manifest.RunId}  {manifest.CreatedUtc:yyyy-MM-dd HH:mm:ss zzz}  {manifest.Entries.Count} files  {ByteSizeFormatter.Format(totalBytes)}  profile={manifest.Profile.Name}");
         }
 
         return 0;
