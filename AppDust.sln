@@ -1,0 +1,33 @@
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.0.31903.59
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "AppDust.Core", "src\AppDust.Core\AppDust.Core.csproj", "{45FC3E16-46E1-426B-ABCF-D11D4C10E667}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "AppDust.Cli", "src\AppDust.Cli\AppDust.Cli.csproj", "{A6CA0666-B834-4823-B8C6-C6A3A2F60A37}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "AppDust.Core.Tests", "tests\AppDust.Core.Tests\AppDust.Core.Tests.csproj", "{DA183E14-1EF4-419E-A84A-24F1C8797E21}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{45FC3E16-46E1-426B-ABCF-D11D4C10E667}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{45FC3E16-46E1-426B-ABCF-D11D4C10E667}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{45FC3E16-46E1-426B-ABCF-D11D4C10E667}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{45FC3E16-46E1-426B-ABCF-D11D4C10E667}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A6CA0666-B834-4823-B8C6-C6A3A2F60A37}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A6CA0666-B834-4823-B8C6-C6A3A2F60A37}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A6CA0666-B834-4823-B8C6-C6A3A2F60A37}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A6CA0666-B834-4823-B8C6-C6A3A2F60A37}.Release|Any CPU.Build.0 = Release|Any CPU
+		{DA183E14-1EF4-419E-A84A-24F1C8797E21}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{DA183E14-1EF4-419E-A84A-24F1C8797E21}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{DA183E14-1EF4-419E-A84A-24F1C8797E21}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{DA183E14-1EF4-419E-A84A-24F1C8797E21}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

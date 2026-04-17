@@ -1,0 +1,20 @@
+{
+  "name": "safe-daily",
+  "scope": "CurrentUser",
+  "mode": "Quarantine",
+  "includeProgramData": true,
+  "includeTemp": true,
+  "includeCrashDumps": false,
+  "minimumFileAgeHours": 48,
+  "includePathKeywords": [
+    "temp",
+    "cache",
+    "logs",
+    "crashdumps",
+    "reportqueue",
+    "reportarchive",
+    "dumps",
+    "tmp"
+  ],
+  "excludePathPrefixes": []
+}
